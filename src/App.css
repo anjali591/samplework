@@ -1,7 +1,144 @@
 .App {
   text-align: center;
 }
+ /* The side navigation menu */
+ .sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  color:'red';
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
 
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: red;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.checked {
+  color: orange;
+} 
+.caption div {
+  box-shadow: 0 0 5px #C8C8C8;
+  transition: all 0.3s ease 0s;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.img-circle {
+  border-radius: 0;
+}
+
+.ratio {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+}
+.img-circle {
+  border-radius: 50%;
+ 
+}
+
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.flexi {
+  display:flex;
+
+  }
+.flexi div {
+  flex:1;
+  margin:5px; /* need some space ?*/
+  
+  }
+
+/*
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+}
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        display: -ms-flexbox;
+        display: flex;
+}
+
+.carousel-thumbnails .carousel-indicators {
+    position: static;
+    left: initial;
+    width: initial;
+    margin-right: initial;
+    margin-left: initial;
+    overflow-x: auto;
+    white-space: nowrap;
+}*/
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,9 +149,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+*/
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -1,26 +1,57 @@
 import React from 'react';
-import logo from './logo.svg';
+import Main from './main';
 import './App.css';
+import {Layout, Header, Drawer, Navigation, Content} from 'react-mdl';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="demo-big-content">
+    <Layout>
+        <Header className="headet" style={{ backgroundColor: 'white'}} scroll>
+      <div style={{color:'black', float:'left', marginLeft:'-60px'}}>
+      <button class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon" onclick="history.go(-1);">
+            <i class="fa fa-bars"></i></button>
+            
+ </div>           <div class="sidenav">
+            <Navigation>
+            <Link to="/landing">SHOP</Link>
+            <Link to="/resume">INGREDIENTS</Link>
+                <Link to="/">WHY EFFERVESCENCE</Link>
+                <Link to="/contact">HOW WE DO IT</Link>
+                <Link to="/">ABOUT US</Link>
+                <Link to="/">STORE LOCATOR</Link>
+                <Link to="/">CONTACT US</Link>
+                <Link to="/">LOGIN or REGISTER</Link>
+            </Navigation>
+            </div>
+            <div style={{ float:'right',marginLeft:'1000px', backgroundColor:'black'}}>
+            <i class="fa fa-user-o"></i>
+            <i class="fa fa-shopping-bag"></i>
+            </div>
+        </Header>
+        <Drawer >
+            <img src={require('./img8.jpg')} style={{width:'90px', height:'90px'}}/>
+            <Navigation>
+            <Link to="/landing">SHOP</Link>
+            <Link to="/resume">INGREDIENTS</Link>
+                <Link to="/">WHY EFFERVESCENCE</Link>
+                <Link to="/contact">HOW WE DO IT</Link>
+                <Link to="/">ABOUT US</Link>
+                <Link to="/">STORE LOCATOR</Link>
+                <Link to="/">CONTACT US</Link>
+                <Link to="/">LOGIN or REGISTER</Link>
+            </Navigation>
+        </Drawer>
+        <Content>
+            <div className="page-content" />
+            <Main />      
+        </Content>
+    </Layout>
+</div>
     </div>
+  
   );
 }
-
-export default App;
+       export default App;
