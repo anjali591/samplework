@@ -11,10 +11,11 @@ function App() {
     <Layout>
         <Header className="headet" style={{ backgroundColor: 'white'}} scroll>
       <div style={{color:'black', float:'left', marginLeft:'-60px'}}>
-      <button class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon" onclick="history.go(-1);">
-            <i class="fa fa-bars"></i></button>
-            
- </div>           <div class="sidenav">
+      <button class="material-icons" onclick="history.go(-1);" style={{fontSize: '0px'}}>
+      <i class="fa fa-bars" style={{fontSize: '30px'}}></i>
+           </button>
+           
+ </div>            <div class="sidenav">
             <Navigation>
             <Link to="/landing">SHOP</Link>
             <Link to="/resume">INGREDIENTS</Link>
